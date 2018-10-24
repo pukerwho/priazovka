@@ -11900,5 +11900,15 @@ header {
 
   .header-search {
     margin: 10px 0px; } }
+/* SEARCH */
+.bmd-form-group {
+  width: 100%; }
+
+.proinput {
+  padding: 0px !important;
+  margin: 0px !important; }
+
+.proinput input {
+  font-size: 1rem !important; }
 
 /*# sourceMappingURL=style.css.map */
