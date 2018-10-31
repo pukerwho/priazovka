@@ -12,4 +12,45 @@ $(window).scroll(function(){
   } else {
     $('header').removeClass('header__fixed')
   }
-})
+});
+
+// WEATHER START //
+var mainWeather = {
+    init: function() {
+      return mainWeather.getWeather();
+  },
+
+  getWeather: function() {
+      $.get(
+      'http://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780", 
+      function(data) {
+        var json = {
+          json: JSON.stringify(data),
+          delay: 1
+        };
+        echo(json);
+      }
+    );
+  },
+  //Prints result from the weatherapi, receiving as param an object
+  createWeatherWidg: function(data) {
+    return "<div class='pressure'>Температура: " + (data.main.temp - 273.15).toFixed(2) + " C</div>"
+  }
+};
+
+var echo = function(dataPass) {
+  $.ajax({
+    type: "POST",
+    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + "Henichesk" + "," + 'UA' + "&APPID=90218217a5640940a557861baa80b780",
+    data: dataPass,
+    cache: false,
+    success: function(json) {
+      var wrapper = $("#weather");
+      wrapper.empty();
+      wrapper.append(mainWeather.createWeatherWidg(json));
+    }
+  });
+};
+
+mainWeather.init();
+// WEATHER END //
