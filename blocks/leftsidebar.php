@@ -38,7 +38,7 @@
 		<div id="weather"></div>	
 	</div>
 	<div>
-		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/gengorka" class="text-info">Отдых в Генгорке</a></h2>
+		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/rest-in-gengorka" class="text-info">Отдых в Генгорке</a></h2>
 		<?php 
 	    $custom_query = new WP_Query( array( 'post_type' => 'gengorka','posts_per_page'=>'10' ) );
 	    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -48,7 +48,7 @@
 	  <?php endwhile; endif; ?>
 	</div>
 	<div>
-		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/shchaslyvtsevo" class="text-info">Отдых в Счастливцево</a></h2>
+		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/rest-in-schastlivtsevo" class="text-info">Отдых в Счастливцево</a></h2>
 		<?php 
 	    $custom_query = new WP_Query( array( 'post_type' => 'shchaslyvtsevo','posts_per_page'=>'10' ) );
 	    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -58,7 +58,7 @@
 	  <?php endwhile; endif; ?>
 	</div>
 	<div>
-		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/strelkovoe" class="text-info">Отдых в Стрелковом</a></h2>
+		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/rest-in-strelkovoe" class="text-info">Отдых в Стрелковом</a></h2>
 		<?php 
 	    $custom_query = new WP_Query( array( 'post_type' => 'strelkovoe','posts_per_page'=>'10' ) );
 	    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -67,7 +67,7 @@
 	    	</div>
 	  <?php endwhile; endif; ?>
 		<div>
-			<h2 class="lead text-uppercase pt-5 pb-3"><a href="<?php echo get_post_type_archive_link( 'videos' ); ?>" class="text-info">Видео</a></h2>
+			<h2 class="lead text-uppercase pt-5 pb-3"><a href="/videos" class="text-info">Видео</a></h2>
 			<?php 
 		    $custom_query = new WP_Query( array( 'post_type' => 'videos','posts_per_page'=>'10' ) );
 		    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -77,7 +77,7 @@
 		  <?php endwhile; endif; ?>
 		</div>
 		<div>
-			<h2 class="lead text-uppercase pt-5 pb-3"><a href="<?php echo get_post_type_archive_link( 'webcamers' ); ?>" class="text-info">WEB-Камеры</a></h2>
+			<h2 class="lead text-uppercase pt-5 pb-3"><a href="/webcamers" class="text-info">WEB-Камеры</a></h2>
 			<?php 
 		    $custom_query = new WP_Query( array( 'post_type' => 'webcamers','posts_per_page'=>'10' ) );
 		    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
