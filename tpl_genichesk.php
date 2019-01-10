@@ -13,7 +13,7 @@ Template Name: Геническ
     </div>
     <div class="col-md-9 col-sx-12">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="page-title pt-5">
+        <div class="page-title pt-5 mb-5">
           <h1><?php the_title(); ?></h1>
         </div>
         <div class="row">

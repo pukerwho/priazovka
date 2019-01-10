@@ -50,20 +50,19 @@ function addAdminEditorStyle() {
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
     wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/style.css' );
-    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
-    wp_register_script( 'loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
-    wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/scripts.js');
- 
-
-    wp_localize_script( 'loadmore', 'loadmore_params', array(
-        'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', 
-        'posts' => json_encode( $wp_query->query_vars ), 
-        'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
-        'max_page' => $wp_query->max_num_pages
-    ) );
- 
-    wp_enqueue_script( 'loadmore' );
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js','','',true);
+    wp_enqueue_script( 'myscripts', get_template_directory_uri() . '/js/scripts.js','','',true);
+    wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js','','',true);
+    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.min.js','','',true);
 };
+
+//подключаем стили к админке
+function load_custom_wp_admin_style() {
+        wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+        wp_enqueue_style( 'custom_wp_admin_css' );
+}
+add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
 function loadmore_ajax_handler(){
  
     // prepare our arguments for the query
