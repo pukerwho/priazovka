@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Стрелковое
+Template Name: Видео
 */
 ?>
 
@@ -12,29 +12,24 @@ Template Name: Стрелковое
       <?php get_template_part( 'blocks/leftsidebar', 'default' ); ?>
     </div>
     <div class="col-md-9 col-sx-12">
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="page-title pt-5 mb-5">
           <h1><?php the_title(); ?></h1>
         </div>
         <div class="row">
           <?php 
-            $custom_query = new WP_Query( array( 'post_type' => 'strelkovoe', 'orderby'   => 'rand' ) );
+            $custom_query = new WP_Query( array( 'post_type' => 'videos', 'orderby'   => 'rand' ) );
             if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-            <div class="col-md-3 col-sm-12 mb-5">
-              <?php get_template_part('blocks/hotels/hotel-card') ?>
+            <div class="col-md-4 col-sm-12 mb-5">
+              <?php get_template_part('blocks/box-card') ?>
             </div>
           <?php endwhile; endif; ?>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div class="strelkovoe-more text-center">
-              <div class="btn btn-outline-info">Еще варианты</div>
+            <div class="videos-more text-center">
+              <div class="btn btn-outline-info">Загрузить еще</div>
             </div>    
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <?php comments_template(); ?>
           </div>
         </div>
       <?php endwhile; else: ?>

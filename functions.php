@@ -156,6 +156,19 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
+
+  register_post_type( 'videos',
+    array(
+      'labels' => array(
+          'name' => __( 'Видео' ),
+          'singular_name' => __( 'Видео' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    )
+  );
 }
 
 add_action( 'init', 'create_post_type' );
