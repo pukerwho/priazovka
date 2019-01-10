@@ -29,7 +29,7 @@ Template Name: Главная страница
       <!-- Отдых в Геническе -->
       <div class="lead text-uppercase text-weight-bold pt-5 pb-3">
         <span>Отдых в Геническе 2018</span>
-        <a href="rest-in-genichesk" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
+        <a href="/rest-in-genichesk" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
       </div>
       <div class="row">
         <?php 
@@ -40,7 +40,7 @@ Template Name: Главная страница
           </div>
         <?php endwhile; endif; ?>
         <div class="col-sm-12 d-md-none d-sm-block">
-          <a href="rest-in-genichesk" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
+          <a href="/rest-in-genichesk" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
         </div>
       </div>
       <!-- YOUTUBE -->

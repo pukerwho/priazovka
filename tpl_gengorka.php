@@ -12,37 +12,34 @@
       <?php get_template_part( 'blocks/leftsidebar', 'default' ); ?>
     </div>
     <div class="col-md-9 col-sx-12">
-    	<div class="lead text-uppercase text-weight-bold pt-5 pb-3">
-        <span>Отдых в Генгорка 2019</span>
-        <a href="/gengorka" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
-      </div>
-      <div class="row">
-        <?php 
-          $custom_query = new WP_Query( array( 'post_type' => 'gengorka', 'orderby'   => 'rand' ) );
-          if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-          <div class="col-md-3 col-sm-12 mb-5">
-            <a href="<?php the_permalink(); ?>">
-      			  <?php if(rwmb_meta('hotel_alert') == 'Популярно' or rwmb_meta('hotel_alert') == 'Рекомендовано' or rwmb_meta('hotel_alert') == 'Пользуется спросом'): ?>
-      			  	<div class="hotel-alert bg-success">
-      			  		<?php echo rwmb_meta('hotel_alert'); ?>
-      					<div class="hotel-alert_after"></div>
-      			  	</div>
-      			  <? elseif (rwmb_meta('hotel_alert') == 'Отличная цена' or rwmb_meta('hotel_alert') == 'Акция'): ?>
-      				  <div class="hotel-alert bg-yellow">
-      					<?php echo rwmb_meta('hotel_alert'); ?>
-      					<div class="hotel-alert_after"></div>
-      				  </div>
-      		    <?php endif ?>
-        			<?php echo get_the_post_thumbnail($post->ID,'post-thumba', array('class' => 'card-img-top')) ?>
-            </a>
-            <a href="<?php the_permalink(); ?>" class="lead text-secondary leftsidebar-link"><?php the_title(); ?></a>
-            <div class="text-success"><?php if(rwmb_meta('hotel_type')){ echo rwmb_meta('hotel_type'); } ?></div> 
-          </div>
-        <?php endwhile; endif; ?>
-        <div class="col-sm-12 d-md-none d-sm-block">
-          <a href="/gengorka" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="page-title pt-5">
+          <h1><?php the_title(); ?></h1>
         </div>
-      </div>
+        <div class="row">
+          <?php 
+            $custom_query = new WP_Query( array( 'post_type' => 'gengorka', 'orderby'   => 'rand' ) );
+            if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+            <div class="col-md-3 col-sm-12 mb-5">
+              <?php get_template_part('blocks/hotels/hotel-card') ?>
+            </div>
+          <?php endwhile; endif; ?>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="gengorka-more text-center">
+              <div class="btn btn-outline-info">Еще варианты</div>
+            </div>    
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <?php comments_template(); ?>
+          </div>
+        </div>
+      <?php endwhile; else: ?>
+          <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+      <?php endif; ?>
     </div>
   </div>
 </div>
