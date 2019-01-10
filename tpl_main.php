@@ -38,7 +38,7 @@ Template Name: Главная страница
       <!-- Отдых в Геническе -->
       <div class="lead text-uppercase text-weight-bold pt-5 pb-3">
         <span>Отдых в Геническе 2018</span>
-        <a href="<?php echo get_post_type_archive_link( 'genicheskhotels' ); ?>" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
+        <a href="rest-in-genichesk" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
       </div>
       <div class="row">
         <?php 
@@ -64,13 +64,13 @@ Template Name: Главная страница
           </div>
         <?php endwhile; endif; ?>
         <div class="col-sm-12 d-md-none d-sm-block">
-          <a href="/genichesk" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
+          <a href="rest-in-genichesk" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
         </div>
       </div>
       <!-- YOUTUBE -->
       <div class="lead text-uppercase text-weight-bold pt-3 mb-4">
         <span>Наш канал</span>
-        <a href="<?php echo get_post_type_archive_link( 'genicheskhotels' ); ?>" class="float-right btn btn-outline-danger d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Подписаться</a>
+        <a href="https://www.youtube.com/channel/UCTwTgpDfjQ5mWbT79wk37pg" class="float-right btn btn-outline-danger d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Подписаться</a>
       </div>
       <div class="row mb-5 clear-both">
         <?php 
@@ -88,7 +88,7 @@ Template Name: Главная страница
       <!-- Отдых в Генгорке -->
       <div class="lead text-uppercase text-weight-bold pt-3 pb-3">
         <span>Отдых в Генгорке 2018</span>
-        <a href="<?php echo get_post_type_archive_link( 'gengorka' ); ?>" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
+        <a href="rest-in-gengorka" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
       </div>
       <div class="row">
         <?php 
@@ -114,7 +114,7 @@ Template Name: Главная страница
           </div>
         <?php endwhile; endif; ?>
         <div class="col-sm-12 d-md-none d-sm-block">
-          <a href="<?php echo get_post_type_archive_link( 'gengorka' ); ?>" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
+          <a href="rest-in-gengorka" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
         </div>
       </div>
       <!-- ПРИАЗОВКА -->
@@ -135,7 +135,7 @@ Template Name: Главная страница
       <!-- Отдых в Счастливцево -->
       <div class="lead text-uppercase text-weight-bold pt-5 pb-3">
         <span>Отдых в Счастливцево 2018</span>
-        <a href="<?php echo get_post_type_archive_link( 'shchaslyvtsevo' ); ?>" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
+        <a href="rest-in-schastlivtsevo" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
       </div>
       <div class="row">
         <?php 
@@ -161,7 +161,7 @@ Template Name: Главная страница
           </div>
         <?php endwhile; endif; ?>
         <div class="col-sm-12 d-md-none d-sm-block">
-          <a href="<?php echo get_post_type_archive_link( 'shchaslyvtsevo' ); ?>" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
+          <a href="rest-in-schastlivtsevo" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
         </div>
       </div>
       <!-- ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ -->
@@ -203,7 +203,7 @@ Template Name: Главная страница
       <!-- Отдых в Стрелковом -->
       <div class="lead text-uppercase text-weight-bold pt-5 pb-3">
         <span>Отдых в Стрелковом 2018</span>
-        <a href="<?php echo get_post_type_archive_link( 'strelkovoehotels' ); ?>" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
+        <a href="rest-in-strelkovoe" class="float-right btn btn-outline-info d-none d-md-block my-2 my-sm-0 mr-md-0 mr-sm-2">Все предложения</a>
       </div>
       <div class="row">
         <?php 
@@ -229,7 +229,7 @@ Template Name: Главная страница
           </div>
         <?php endwhile; endif; ?>
         <div class="col-sm-12 d-md-none d-sm-block">
-          <a href="<?php echo get_post_type_archive_link( 'schastlivtsevohotels' ); ?>" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
+          <a href="rest-in-strelkovoe" class="float-md-right btn btn-outline-info my-2 my-sm-0 mr-sm-2">Все предложения</a>
         </div>
       </div>
     </div>
@@ -464,6 +464,5 @@ Template Name: Главная страница
     </div>
   </div>
 </div>
-
 
 <?php get_footer(); ?>

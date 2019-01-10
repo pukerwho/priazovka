@@ -9,9 +9,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="site-description">
-              <?php if(ale_get_option('footer_text'))
-                { echo ale_get_option('footer_text'); } 
-              ?>
+              
             </div>
             <ul class="list-inline social lead py-3">
               <?php if (ale_get_option('fb')) : ?>

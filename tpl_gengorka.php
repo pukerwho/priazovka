@@ -1,7 +1,7 @@
 <?php
-/*
-Template Name: Генгорка
-*/
+  /*
+  Template Name: Генгорка
+  */
 ?>
 
 <?php get_header(); ?>
@@ -46,3 +46,5 @@ Template Name: Генгорка
     </div>
   </div>
 </div>
+
+<?php get_footer(); ?>

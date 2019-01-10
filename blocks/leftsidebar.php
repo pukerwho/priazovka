@@ -21,7 +21,7 @@
 		)); ?>
 	</div>
 	<div class="mb-5">
-		<h2 class="lead text-uppercase pt-5 pb-3"><a href="/genichesk-rest" class="text-info">Отдых в Геническе</a></h2>
+		<h2 class="lead text-uppercase pt-5 pb-3"><a href="rest-in-genichesk" class="text-info">Отдых в Геническе</a></h2>
 		<?php 
 	    $custom_query = new WP_Query( array( 'post_type' => 'genichesk', 'posts_per_page'=>'10' ) );
 	    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -66,16 +66,6 @@
 	    		<?php echo get_the_post_thumbnail($post->ID,'post-thumba', array('class' => 'sidebar-img rounded-circle mr-3')) ?><a href="<?php the_permalink(); ?>" class="text-secondary leftsidebar-link"><?php the_title(); ?></a>
 	    	</div>
 	  <?php endwhile; endif; ?>
-	  <div>
-			<h2 class="lead text-uppercase pt-5 pb-3"><a href="<?php echo get_post_type_archive_link( 'dostop' ); ?>" class="text-info">Достопримечательности</a></h2>
-			<?php 
-		    $custom_query = new WP_Query( array( 'post_type' => 'dostop','posts_per_page'=>'10' ) );
-		    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-		    	<div class="mb-2">
-		    		<?php echo get_the_post_thumbnail($post->ID,'post-thumba', array('class' => 'sidebar-img rounded-circle mr-3')) ?><a href="<?php the_permalink(); ?>" class="text-secondary leftsidebar-link"><?php the_title(); ?></a>
-		    	</div>
-		  <?php endwhile; endif; ?>
-		</div>
 		<div>
 			<h2 class="lead text-uppercase pt-5 pb-3"><a href="<?php echo get_post_type_archive_link( 'videos' ); ?>" class="text-info">Видео</a></h2>
 			<?php 
