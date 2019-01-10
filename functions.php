@@ -169,6 +169,19 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
+
+  register_post_type( 'webcamers',
+    array(
+      'labels' => array(
+          'name' => __( 'Web-Камеры' ),
+          'singular_name' => __( 'Web-Камера' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    )
+  );
 }
 
 add_action( 'init', 'create_post_type' );
