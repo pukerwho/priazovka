@@ -102,7 +102,7 @@ Template Name: Главная страница
           <div class="swiper-container swiper-nowgenich">
             <div class="swiper-wrapper">
               <?php 
-                $custom_query = new WP_Query( array( 'post_type' => array('genicheskhotels','gengorkahotels','schastlivtsevohotels', 'strelkovoehotels'), 'orderby'   => 'rand' ) );
+                $custom_query = new WP_Query( array( 'post_type' => array('genichesk','gengorka','shchaslyvtsevo', 'strelkovoe'), 'orderby'   => 'rand' ) );
                 if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
                 <div class="swiper-slide">
                   <?php get_template_part('blocks/hotels/hotel-card'); ?>

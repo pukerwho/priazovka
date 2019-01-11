@@ -9,7 +9,9 @@
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="row pt-5 mb-5">
         	<div class="col-md-12">
-        		<?php the_title(); ?>
+        		<div class="single-title">
+        			<h1><?php the_title(); ?></h1>
+        		</div>
         	</div>
         </div>
         <div class="row">

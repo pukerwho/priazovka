@@ -182,6 +182,19 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     )
   );
+
+  register_post_type( 'photoalbums',
+    array(
+      'labels' => array(
+          'name' => __( 'Фотоальбомы' ),
+          'singular_name' => __( 'Фотоальбом' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    )
+  );
 }
 
 add_action( 'init', 'create_post_type' );
@@ -261,6 +274,22 @@ function your_prefix_get_meta_box( $meta_boxes ) {
         ),
       ),
     )
+  );
+
+  $meta_boxes[] = array(
+    'id' => 'photoalbums-info',
+    'title' => esc_html__( 'Информация', 'photoalbums-info' ),
+    'post_types' => array( 'photoalbums' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Фотографии',
+        'id' => $prefix . 'photoalbum-img',
+        'type' => 'image_advanced',
+      ),
+    ),
   );
   return $meta_boxes;
 }
