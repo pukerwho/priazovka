@@ -67,7 +67,7 @@
 	    	</div>
 	  <?php endwhile; endif; ?>
 		<div>
-			<h2 class="lead text-uppercase pt-5 pb-3"><a href="/videos" class="text-info">Видео</a></h2>
+			<h2 class="lead text-uppercase pt-5 pb-3"><a href="/page-videos" class="text-info">Видео</a></h2>
 			<?php 
 		    $custom_query = new WP_Query( array( 'post_type' => 'videos','posts_per_page'=>'10' ) );
 		    if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
