@@ -26,7 +26,7 @@ Template Name: Фотоальбом
               </div>
              <div class="photoalbum-img mb-5">
               <?php 
-                $images = rwmb_meta( 'meta-photoalbum-img', array( 'size' => 'large' ) );
+                $images = rwmb_meta( 'meta-photoalbum-img', array( 'size' => 'medium' ) );
                 $title_img = get_the_title();
                 foreach ( $images as $image ) {
                   echo '<div class="photoalbum-img__item mb-2"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
