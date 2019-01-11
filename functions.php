@@ -291,6 +291,22 @@ function your_prefix_get_meta_box( $meta_boxes ) {
       ),
     ),
   );
+
+  $meta_boxes[] = array(
+    'id' => 'videos-info',
+    'title' => esc_html__( 'Информация', 'videos-info' ),
+    'post_types' => array( 'videos' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Id Видео на YouTube',
+        'id' => $prefix . 'video-id',
+        'type' => 'text',
+      ),
+    ),
+  );
   return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'your_prefix_get_meta_box' );

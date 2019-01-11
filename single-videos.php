@@ -9,9 +9,15 @@
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="row pt-5 mb-5">
         	<div class="col-md-12">
-        		<div class="single-title">
+        		<div class="single-title mb-4">
         			<h1><?php the_title(); ?></h1>
         		</div>
+            <div class="single-description mb-4">
+              <?php the_content(); ?>
+            </div>
+            <div class="single-video">
+              <iframe width="100%" height="500px" src="https://www.youtube.com/embed/<?php echo rwmb_meta('meta-video-id'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         	</div>
         </div>
         <div class="row">
