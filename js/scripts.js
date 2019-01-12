@@ -58,11 +58,11 @@ mainWeather.init();
 //SWIPER SLIDER
 
   var mySwiper = new Swiper ('.swiper-now-watch', {
-    slidesPerView: 'auto',
+    slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
     autoplay: {
-        delay: 1000,
+        delay: 9000,
     },
     navigation: {
       nextEl: '.swiper-now-watch-button-next',
