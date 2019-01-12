@@ -99,7 +99,7 @@ Template Name: Главная страница
       </div>
       <div class="row mb-5">
         <div class="col-md-12">
-          <div class="swiper-container swiper-nowgenich">
+          <div class="swiper-container swiper-now-watch">
             <div class="swiper-wrapper">
               <?php 
                 $custom_query = new WP_Query( array( 'post_type' => array('genichesk','gengorka','shchaslyvtsevo', 'strelkovoe'), 'orderby'   => 'rand' ) );
@@ -109,8 +109,8 @@ Template Name: Главная страница
                 </div>
               <?php endwhile; endif; ?>
             </div>
-            <div class="swiper-button-next swiper-nowgenich-button-next"></div>
-            <div class="swiper-button-prev swiper-nowgenich-button-prev"></div>
+            <div class="swiper-button-next swiper-now-watch-button-next"></div>
+            <div class="swiper-button-prev swiper-now-watch-button-prev"></div>
           </div>
         </div>
       </div>

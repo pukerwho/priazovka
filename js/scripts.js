@@ -54,3 +54,18 @@ var echo = function(dataPass) {
 
 mainWeather.init();
 // WEATHER END //
+
+//SWIPER SLIDER
+
+  var mySwiper = new Swiper ('.swiper-now-watch', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 1000,
+    },
+    navigation: {
+      nextEl: '.swiper-now-watch-button-next',
+      prevEl: '.swiper-now-watch-button-prev',
+    },
+  });
