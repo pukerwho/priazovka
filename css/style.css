@@ -11967,7 +11967,12 @@ header {
     width: 100%; }
 
   .header-search {
-    margin: 10px 0px; } }
+    margin: 10px 0px; }
+
+  .hotel-img {
+    -ms-grid-columns: calc(50% - 3px) [2];
+    grid-template-columns: repeat(2, -webkit-calc(50% - 3px));
+    grid-template-columns: repeat(2, calc(50% - 3px)); } }
 /* SEARCH */
 .bmd-form-group {
   width: 100%; }
