@@ -277,6 +277,22 @@ function your_prefix_get_meta_box( $meta_boxes ) {
   );
 
   $meta_boxes[] = array(
+    'id' => 'hotels-photo',
+    'title' => esc_html__( 'Фотографии', 'hotels-photo' ),
+    'post_types' => array('genichesk','gengorka', 'shchaslyvtsevo', 'strelkovoe'),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+      array(
+        'name'  => 'Фотографии',
+        'id' => $prefix . 'hotel-img',
+        'type' => 'image_advanced',
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
     'id' => 'photoalbums-info',
     'title' => esc_html__( 'Информация', 'photoalbums-info' ),
     'post_types' => array( 'photoalbums' ),

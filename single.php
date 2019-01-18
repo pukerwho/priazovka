@@ -61,6 +61,15 @@
     		<div class="row px-0 mx-0">
       		<div class="col-md-8 pl-0 pr-md-5 pr-sm-0 border-right">
 	      		<div class="single-content">
+	      			<div class="hotel-img">
+	      				<?php 
+	                $images = rwmb_meta( 'meta-hotel-img', array( 'size' => 'medium' ) );
+	                $title_img = get_the_title();
+	                foreach ( $images as $image ) {
+	                  echo '<div class="hotel-img__item"><a href="', $image['full_url'], '" data-lightbox="', $title_img,'" data-title="', $title_img,'"><img src="', $image['url'], '"></a></div>';
+	              } 
+	              ?>
+	      			</div>
 	      			<?php the_content(); ?>	
 	      		</div>
 	      		<hr>
